@@ -1,6 +1,23 @@
 ul{
     padding:20px;
 }
+
+#content{
+    max-width:1000px;
+    margin:0 auto;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#content > div{
+    margin-top:20px;
+    display:flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-grow:1;
+    flex-shrink: 1;
+}
 #content > div > div {
     position: relative;
     margin:0 auto;

@@ -1,0 +1,33 @@
+#contentimg > img{
+    width: 100%;
+    height: 100%;
+    transition: all .4s;
+}
+#contentimg > img:hover{
+    width: 95%;
+    height: 95%;
+}
+#coontent h2 {grid-area: h;}
+#content #contentimg:first-child {grid-area: kep;}
+
+#content{
+    max-width:1000px;
+    margin:0 auto;
+    padding: 20px;
+}
+#content-gallery{
+    display:grid;
+    grid-gap: 10px;
+    grid-template-areas: 'kep . .';
+}
+
+@media (max-width: 1200px){
+    #content-gallery{
+        grid-template-areas: 'kep .';
+    }
+}
+@media (max-width: 992px){
+    #content-gallery{
+        grid-template-areas: 'kep';
+    }
+}
