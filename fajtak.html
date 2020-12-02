@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bowlby+One+SC&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/fajtak.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>A ballonok fajtái</title>
+</head>
+<body>
+    <header>
+       <img src="./img/logo.png" alt="LOGO" id="logo">
+       <span>Ballon</span>
+       <div id="menu">
+           <div id="index"><a href="index.html">A kezdetek</a></div>
+           <div id="fajtak"><a href="fajtak.html">A ballonok fajtái</a></div>
+           <div id="galeria"><a href="galeria.html">Galéria</a></div>
+       </div>
+       <div id="hamburger"><div id="menu-toggle"></div><div id="menu-toggle"></div><div id="menu-toggle"></div></div>
+    </header>
+ 
+    <nav>
+        <div id="hamburger" class="ham"><div id="menu-toggle"></div><div id="menu-toggle"></div><div id="menu-toggle"></div></div>
+        <a href="index.html">A kezdetek</a>
+        <a href="fajtak.html">A ballonok fajtái</a>
+        <a href="galeria.html">Galéria</a>
+    </nav>
+ 
+    <section id="head">
+        <img src="./img/headbg.jpg" alt="kep" id="imghead">
+        <h1>A világ a levegőből</h1>
+    </section>
+ 
+    <section id="main">
+       <img src="./img/bg11.png" alt="kep" id="imgpaper">
+       <div id="body">
+            <div id="content">
+                <h2>Gázballon</h2>
+                <p>Korábban hidrogén gázzal töltötték fel (Ebbe a csoportba tartozik a tragikus sorsú Zeppelin is). Tekintettel a hidrogén baleset- és égés veszélyességére, erre a célra már a hélium gázt használják. (éghetetlen nemesgáz) Ez a ballonozásnak az a fajtája, ahol a süllyedés megfékezésére a ballasztot (homok) ki kell dobni, hiszen a süllyedés érdekében kieresztett héliumból vissza már nem tudnak szerezni, és csak így tudnak könnyíteni a ballon súlyán.</p>
+                <div>
+                    <img src="./img/white-hydrogen-gas-balloon-500x500.png" alt="">
+                    <img src="./img/gl-gas-sportballon_39-1418834944-18.png" alt="">
+                </div>
+                
+                     <ul>
+                         <li>Az irányítható hőlégballon-t, amely szivar alakú, valamelyest a Zeppelinek formájára hasonlít, és minden esetben szélmotorral hajtják. Nem túl erős szél esetén vissza tud repülni a felszállási helyére.</li>
+                         <li>A másik változat az irányíthatatlan hőlégballonok csoportja. (motor nem segíti a haladását, irányítani a rétegszelek ismeretében - korlátozottan - lehetséges.)</li>
+                     </ul>
+                     <p>Ezeknek is 2 további - alak szerinti - kivitelezési módjával találkozhatunk.</p>
+                     <ul>
+                         <li>Formaballonok, (még ház vagy kamion alakúak is lehetnek...)</li>
+                         <li>A legelterjedtebbnek számítanak, a színes gömb alakú ballonok.</li>
+                     </ul>
+                
+                <div>
+                    <div>
+                        <img src="./img/leghajo.png" alt="leghajo">
+                        <h2>irányíthatatlan légballon</h2>
+                    </div>
+                    <div>
+                        <img src="./img/ballon3.png" alt="gömb alakú ballon">
+                        <h2>gömb alakú ballon</h2>
+                    </div>
+                    <div>
+                        <img src="./img/formaballon1.png" alt="formaballon">
+                        <h2>formaballon</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </section>
+ 
+    <footer>
+        <hr>
+        <p><span>A weboldalt Kálmán Bence készítette</span></p>
+    </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script>
+
+$(window).on("load resize scroll", function() {
+ $("#head").each(function() {
+   var windowTop = $(window).scrollTop();
+   var elementTop = $(this).offset().top;
+   var leftPosition = (windowTop - elementTop)/5;
+     $(this)
+       .find("#imghead")
+       .css({ top: -leftPosition });
+ });
+});
+
+$(document).ready(function(){
+   var ix = 1;
+   $("#hamburger").click(function(){
+       $("nav").animate({
+           width: "toggle"
+       });
+   });
+});
+$( '.ham' ).on("click", function(){
+   $("nav").animate({
+        width: "toggle"
+   });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+#content > div:nth-child(odd) > p { order:2; padding: 0 0 0 30px;}
+img{height: 100%;width: 20%;}
+@media (max-width: 992px){
+    img{width:40%;height:100%;}
+}
+@media (max-width: 768px){
+    img{width:100%;}
+}

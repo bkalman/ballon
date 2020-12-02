@@ -98,16 +98,20 @@ header > span {
     flex-wrap: wrap;
 }
 #content > div{
+    margin-top:20px;
     display:flex;
     flex-direction: row;
+    flex-basis: 100%;
+    flex-grow:1;
+    flex-shrink: 1;
 }
 
+#content img{
+    display: block;
+    margin:0 auto;
+}
 h2{
     font-family: 'Bowlby One SC', cursive;
-}
-img{
-    width:20%;
-    height: 100%;
 }
 p{
     margin: 30px 0;
@@ -182,8 +186,7 @@ nav > a:hover{
 @media (max-width: 992px){
     #content{width:100%;}
     #head > h1{font-size:45px;width:auto;margin:0 0 0 10px;}
-    p{font-size:2rem;}
-    img{width:40%;height:100%;}
+    p,ul{font-size:2rem;}
     #menu{display: none;}
     header{height:100px;}
     #logo{width:90px}
@@ -194,10 +197,9 @@ nav > a:hover{
 @media (max-width: 768px){
     #content > div{flex-direction: column;}
     h2{font-size:3rem;}
-    p{font-size:3rem;}
-    img{width:100%;}
+    p,ul{font-size:3rem;}
     header{height:150px;}
     #logo{width:140px}
-    header > span{font-size:130px}
+    header > span{font-size:110px}
     #hamburger{display:block;top:35px;right:45px}
 }

@@ -1,0 +1,39 @@
+ul{
+    padding:20px;
+}
+#content > div > div {
+    position: relative;
+    margin:0 auto;
+    width: 300px;
+    height: 300px;
+}
+#content > div > div > h2{
+    position: absolute;
+    bottom:0;
+}
+#content > div > div > img{
+    position: absolute;
+    bottom:80px;
+    left:0;right:0;
+}
+#content > div > div:first-child > img{
+    height: 150px;
+}
+#content img{
+    height: 250px;
+}
+#content > div > div > h2{
+    width:100%;
+    font-size:20px;
+    text-align: center;
+}
+@media (max-width: 992px){
+}
+@media (max-width: 768px){
+    #content > div > div:first-child > img{height: 400px;}
+    #content > div > div:first-child{height: 500px;}
+    #content img{width:80%;height: 90%;}
+    #content > div > div > h2{font-size:3rem;}
+    #content > div > div {width:100%;height:1000px;}
+    #content > div:first-child {height: 1880px !important;}
+}
